@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+h1, h2 {
+  font-size: 60px;
+  text-align: center;
+  font-family: arial;
+  margin: 10px;
+}
+
+button {
+  display: block;
+  margin: auto;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  cursor: url(../img/hammer1.png), auto; 
+}
+
+.container:active {
+  cursor: url(../img/hammer2.png), auto;
+}
+
+.ground {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.ground::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 100px;
+  background: url(../img/ground.png) bottom center no-repeat;
+  background-size: 80%;
+  position: absolute;
+  bottom: -25px;
+}
+
+.mole {
+  width: 100%;
+  height: 100%;
+  background: url(../img/mole.png) bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100px;
+  transition: top 0.3s;
+}
+
+.ground.show .mole {
+  top: -15px;
+}
+
+.main-page {
+  background: url(../img/grass.jpg);
+}
+
+.title {
+  margin: 30pt;
+  padding-top: 5pt;
+  color: #8e4435;
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+  background-color: white;
+}
+
+.start {
+  font-family: 'Press Start 2P', cursive;
+  font-size: medium;
+  border-color: black;
+  border-width: 2pt;
+}
+
+.result {
+  font-family: 'Press Start 2P', cursive;
+  font-size: large;
+}
+
+.time {
+  font-family: 'Press Start 2P', cursive;
+  font-size: large;
+}
+
+.result-time {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  margin-top: 10pt;
+}
